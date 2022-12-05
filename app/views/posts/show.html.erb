@@ -1,0 +1,30 @@
+
+<% content_for :page_title, @post.title%>
+<% content_for :user_login, @curruser.name%>
+
+<section class="section">
+    <div class="container">
+        <nav class="level">
+        <div class="level-left">
+            <p class="level-item">
+                <strong>Posted By <%= @user.name %></strong>
+            </p>
+        </div>
+        <div class="level-right">
+            <p class="level-item">
+                <%= link_to "Edit", edit_post_path(@post), class: "button" %>
+            </p>
+            <p class="level-item">
+                <%= button_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "button is-danger" %>
+            </p>
+        </div>
+        </nav>
+        
+        <h1 class="title">
+            <%= @post.title %>
+        </h1>
+        <div class="content">
+            <%= @post.content %>
+        </div> 
+    </div>
+</section>

@@ -1,0 +1,31 @@
+
+<% content_for :page_title, "Login"%>
+
+
+<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+<section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <div class="title">
+            <div class="title">
+
+                <%= f.label :email %>
+                <%= f.email_field :email %>
+            </div>
+            <div class="title">
+                <%= f.label :password %>
+                <%= f.password_field :password %>
+            
+            </div>
+            <%= f.submit "Log in"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+  
+<% end %>

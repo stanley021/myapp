@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+  
+  <body>
+
+  <section class="hero is-primary is-medium", style="background-color:black;">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head" >
+    <nav class="navbar is-dark">
+      <div class="container" >
+        <div class="navbar-brand">
+          <a class="navbar-item">
+              <span><%= link_to "Home", "/", class:"navbar-item" %></span>
+          </a>
+          <a class="navbar-item">
+              <span><%= link_to "Login", "/login", class:"navbar-item" %></span>
+          </a>
+          <a class="navbar-item">
+              <span><%= link_to "Create New User", "/users/new", class:"navbar-item" %></span>
+              
+          </a>
+          
+        
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+
+        <div id="navbarMenuHeroA" class="navbar-menu ">
+          <div class="navbar-end">
+            <span class="navbar-item">
+            <span>
+            <%= link_to "Create new post", new_post_path %>
+            </span>
+            </span>
+            <a class="navbar-item">
+            <span><%= yield :user_login %></span>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        <%= yield :page_title %>
+      </p>
+ 
+    </div>
+  </div>
+  </section>
+
+  <%= yield %>
+  </body>
+  </html>

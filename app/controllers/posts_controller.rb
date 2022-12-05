@@ -5,7 +5,6 @@ class PostsController < ApplicationController
         @user = User.new
         @posts = Post.all
         @user = User.find_by(id: current_user.id)
-        binding.pry
     end
 
     def new

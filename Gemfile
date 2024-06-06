@@ -1,13 +1,8 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-<<<<<<< Updated upstream
-ruby "3.0.0"
-
-=======
 ruby "3.1.0"
 gem "active_model_serializers"
->>>>>>> Stashed changes
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 

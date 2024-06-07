@@ -1,4 +1,5 @@
-require 'pry'
+require 'pry' if Rails.env.development?
+
 
 class ApplicationController < ActionController::Base
     before_action :require_login

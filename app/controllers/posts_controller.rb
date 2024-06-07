@@ -1,4 +1,5 @@
-require 'pry'
+require 'pry' if Rails.env.development?
+
 
 class PostsController < ApplicationController
     def index
